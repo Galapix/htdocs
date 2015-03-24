@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galapix - A zoomable image viewer for GNU/Linux</title>
+  </head>
+
+  <body>
+    <h1 id="galapix">Galapix</h1>
+    <p><a href='http://flattr.com/thing/5682/Galapix-An-image-viewer-for-very-large-collections-of-images'> <img src='http://api.flattr.com/button/button-static-50x60.png' align='right' border='0' title='Flattr this' /></a> Galapix is a simple zoomable image viewer or browser (<a href="http://en.wikipedia.org/wiki/Zooming_user_interface">ZUI</a>) that allows you to directly zoom into large collection of tens of thousand of images from tiny thumbnails down to the images original size, modelessly and fluently with short load times and no loss of interactivity. It accomplishes this by keeping a tile cache which stores not only thumbnails for one size, but thumbnails of many different sizes. It can also be used to view gigapixel scale images.</p>
+    <p><img src="http://galapix.googlecode.com/svn/trunk/htdocs/images/galapix-scale3.jpg" alt="" /> <img src="http://galapix.googlecode.com/svn/trunk/htdocs/images/galapix-scale2.jpg" alt="" /> <img src="http://galapix.googlecode.com/svn/trunk/htdocs/images/galapix-scale1.jpg" alt="" /> <img src="http://galapix.googlecode.com/svn/trunk/htdocs/images/galapix-scale0.jpg" alt="" /></p>
+    <h2 id="videos">Videos</h2>
+    <ul>
+      <li><a href="http://de.youtube.com/watch?v=3_3qKawc2DM">Galapix Video Demonstration</a></li>
+      <li><a href="http://de.youtube.com/watch?v=OJz0dz3oG-Q">Galapix Video Demonstration using BigBuckBunny</a></li>
+    </ul>
+    <h2 id="required-libraries-and-tools">Required Libraries and Tools</h2>
+    <ul>
+      <li><a href="http://www.sqlite.org/">SQlite</a></li>
+      <li><a href="http://www.ijg.org/">libjpeg</a></li>
+      <li><a href="http://www.scons.org/">scons</a></li>
+      <li><a href="http://www.opengl.org">OpenGL</a></li>
+      <li><a href="http://glew.sourceforge.net/">OpenGL Extension Wrangler Library - GLEW</a></li>
+    </ul>
+    <h2 id="running">Running</h2>
+    <p>galapix comes with a number of sub commands, allowing the user to either view images or pre generate thumbnails. The most basic command is:</p>
+    <p><code>./galapix view [FILES]...</code></p>
+    <p>Which display the given files. To pregenerate only the small thumbnails you use:</p>
+    <p><code>./galapix thumbgen [FILES]...</code></p>
+    <p>To generate not only the small thumbnails, but all tiles you use:</p>
+    <p><code>./galapix prepare [FILES]...</code></p>
+    <p>The other available commands are mostly for debugging and have little actualy use.</p>
+    <p>When you do not supply a list of files galapix will display all files in the database.</p>
+    <p>Via the -d flag you can specifiy a database, so that you can have different databases for different files.</p>
+    <h2 id="keyboard-commands">Keyboard Commands</h2>
+    <table>
+      <thead>
+        <tr class="header">
+          <th align="left"><strong>Key</strong></th>
+          <th align="left"><strong>Function</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td align="left">F11</td>
+          <td align="left">toggle fullscreen</td>
+        </tr>
+        <tr class="even">
+          <td align="left">t</td>
+          <td align="left">toggle trackball mode</td>
+        </tr>
+        <tr class="odd">
+          <td align="left">1</td>
+          <td align="left">layout images 4:3</td>
+        </tr>
+        <tr class="even">
+          <td align="left">2</td>
+          <td align="left">layout images 16:9</td>
+        </tr>
+        <tr class="odd">
+          <td align="left">g</td>
+          <td align="left">toggle grid</td>
+        </tr>
+        <tr class="even">
+          <td align="left">Page Up</td>
+          <td align="left">increase gamma</td>
+        </tr>
+        <tr class="odd">
+          <td align="left">Page Down</td>
+          <td align="left">increase gamma</td>
+        </tr>
+        <tr class="even">
+          <td align="left">space</td>
+          <td align="left">print the currently visible images to stdout</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="space-navigator-support">Space Navigator Support</h2>
+    <p>galapix supports the Space Navigator via the Open Source spacenavd daemon:</p>
+    <ul>
+      <li>http://spacenav.sourceforge.net</li>
+    </ul>
+    <p>The 3Dconnexion's official 3dxsrv daemon is not supported, neither is directly reading from /dev/input/eventX.</p>
+    <h2 id="links">Links</h2>
+    <ul>
+      <li><a href="http://eaglemode.sourceforge.net/">Eaglemode - An Open Source ZUI file manager</a></li>
+    </ul>
+  </body>
+</html>
